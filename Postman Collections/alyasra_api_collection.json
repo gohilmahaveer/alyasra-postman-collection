@@ -1,0 +1,448 @@
+{
+	"info": {
+		"_postman_id": "55fed1eb-24c0-45df-a5ec-4a8e210d3daa",
+		"name": "Alyasra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Workflow Config",
+			"item": [
+				{
+					"name": "Save",
+					"id": "43da655b-76eb-44cf-8ff8-fa533f9c2823",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"8bce8b4f-5d34-4913-b3b6-eaa4feaab2dd\",\r\n    \"workflowName\": \"Sample Workflow\",\r\n    \"status\": \"Active\",\r\n    \"type\": \"Main\",\r\n    \"managedEntity\": \"Registration\",\r\n    \"workFlowConfigSteps\": [\r\n        {\r\n            \"id\": \"f7d6c86b-92b0-4e78-8db8-8a4d96bb37a2\",\r\n            \"nextStepId\": \"c09f85f7-1c9e-4aa5-9b9c-2f0a6f3490ab\",\r\n            \"stepOrder\": \"10\",\r\n            \"autoAssign\": true,\r\n            \"departmentId\": 1,\r\n            \"departmentName\": \"Technical\",\r\n            \"childAllowed\": true,\r\n            \"childWorkFlowIds\": \"4aee7e6a-5d09-4d4f-a8a0-10b5d8c2233c\",\r\n            \"tenantId\": 1,\r\n            \"isDeleted\": false\r\n        }\r\n    ],\r\n    \"tenantId\": 1,\r\n    \"isDeleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8080/api/v1/workflow/workflow-config/save"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"id": "925586db-1fad-42e0-b4db-f0bcb5cd8ab9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"8bce8b4f-5d34-4913-b3b6-eaa4feaab2dd\",\r\n    \"workflowName\": \"Sample WF\",\r\n    \"status\": \"Active\",\r\n    \"type\": \"Main\",\r\n    \"managedEntity\": \"Profile Update\",\r\n    \"workFlowConfigSteps\": [\r\n        {\r\n            \"id\": \"f7d6c86b-92b0-4e78-8db8-8a4d96bb37a2\",\r\n            \"stepOrder\": \"10\",\r\n            \"autoAssign\": true,\r\n            \"departmentId\": 1,\r\n            \"departmentName\": \"Finance\",\r\n            \"childAllowed\": true,\r\n            \"childWorkFlowIds\": \"4aee7e6a-5d09-4d4f-a8a0-10b5d8c2233c\",\r\n            \"tenantId\": 1,\r\n            \"isDeleted\": false\r\n        }\r\n    ],\r\n    \"tenantId\": 1,\r\n    \"isDeleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8080/api/v1/workflow/workflow-config/8bce8b4f-5d34-4913-b3b6-eaa4feaab2dd"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch By ID",
+					"id": "99820ecd-4d19-410b-8894-603bee5bc408",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8080/api/v1/workflow/workflow-config/8bce8b4f-5d34-4913-b3b6-eaa4feaab2dd"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"id": "66ae1e76-7989-458f-984e-bdf47f781def",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:8080/api/v1/workflow/workflow-config/8bce8b4f-5d34-4913-b3b6-eaa4feaab2dd"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Without Pagination",
+					"id": "7c6c2247-02d9-47ca-a870-d030d9d25b61",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:8080/api/v1/workflow/workflow-config"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All With Pagination",
+					"id": "92539430-b286-4905-aa10-957f0ed2e2db",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:8080/api/v1/workflow/workflow-config"
+					},
+					"response": []
+				}
+			],
+			"id": "036f9bce-5f85-4a0a-a9b4-78879515ebc9"
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bcccceca-dcca-4a21-a6f1-2ffe1f0d2c2a",
+								"exec": [
+									"var responseBody = pm.response.json();\r",
+									"var accessToken = responseBody.access_token;\r",
+									"pm.globals.set(\"accessToken\", accessToken);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "276ff7f7-3a81-4828-b257-b533bacdfd4d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"type": "text",
+									"key": "client_id",
+									"value": "alyasra-admin-portal"
+								},
+								{
+									"type": "text",
+									"key": "username",
+									"value": "alyasra-admin"
+								},
+								{
+									"type": "text",
+									"key": "password",
+									"value": "alyasra-admin"
+								},
+								{
+									"type": "text",
+									"key": "grant_type",
+									"value": "password"
+								},
+								{
+									"type": "text",
+									"key": "scope",
+									"value": "openid"
+								},
+								{
+									"type": "text",
+									"key": "client_secret",
+									"value": "S8y4rd1zqbIXPZec7SwOLO5YpCnYoGbS"
+								}
+							]
+						},
+						"url": "192.168.0.123:9090/realms/alyasra/protocol/openid-connect/token"
+					},
+					"response": []
+				}
+			],
+			"id": "f06ab4c8-60b0-4a60-858a-6e34b25a422d"
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "Staff Search",
+					"id": "d23d16bc-3b50-4719-b585-e64c5dc4fa37",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": \"1\",\r\n    \"pageSize\": \"10\",\r\n    \"sortBy\": \"id\",\r\n    \"sortOrder\": \"0\",\r\n    \"filters\": [\r\n        {\r\n            \"filterColumn\": \"any\",\r\n            \"filterOperator\": \"equalto\",\r\n            \"filterCondition\": \"and\",\r\n            \"filterValue\": \"Disable\",\r\n            \"filterDataType\": \"string\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:20092/api/v1/staff"
+					},
+					"response": []
+				}
+			],
+			"id": "86a7647d-e30e-48eb-b882-c4322e4e7edf"
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "Save",
+							"id": "90d8154e-d2b1-4db5-bd64-7e1845991d12",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderDate\": \"2024-03-29\",\r\n    \"deliveryDate\": \"2024-04-05\",\r\n    \"orderCategory\": \"Order\",\r\n    \"orderCurrency\": \"KWD\",\r\n    \"orgId\": \"ORG987654\",\r\n    \"orgName\": \"Alyasra Food Co.\",\r\n    \"orderStatus\": \"Draft\",\r\n    \"inventoryOrgId\": \"INV123456\",\r\n    \"inventoryOrgName\": \"Warehouse A\",\r\n    \"inventoryLocation\": \"Aisle 1, Shelf 3\",\r\n    \"civilDoc\": \"123-456-789\",\r\n    \"discount\": 10.50,\r\n    \"total\": 100.00,\r\n    \"netTotal\": 89.50,\r\n    \"remarks\": \"Special instructions: Fragile items\",\r\n    \"customerDetails\": {\r\n        \"mainAccountId\": \"MAINACC789\",\r\n        \"partyId\": \"PARTY123\",\r\n        \"partyName\": \"John Doe\",\r\n        \"siteId\": \"SITE789\",\r\n        \"siteName\": \"Doe Residence\",\r\n        \"siteNumber\": \"12345\"\r\n    },\r\n    \"salesDetails\": {\r\n        \"salesPersonId\": \"SALES123\",\r\n        \"salesPersonName\": \"John Smith\",\r\n        \"divisionId\": \"DIV456\",\r\n        \"divisionName\": \"Sales Division\",\r\n        \"divisionNumber\": \"001\",\r\n        \"catalogId\": \"CAT789\",\r\n        \"catalogName\": \"Food Catalog\",\r\n        \"catalogType\": \"Digital\",\r\n        \"catalogCurrency\": \"KWD\"\r\n    },\r\n    \"shippingDetails\": {\r\n        \"inventoryId\": \"INV987\",\r\n        \"inventoryName\": \"Warehouse B\",\r\n        \"deliveryWindow\": 1,\r\n        \"deliveryMode\": \"Standard\",\r\n        \"isExpress\": false,\r\n        \"shippingAddress\": {\r\n            \"addressLine1\": \"456 Elm St\",\r\n            \"addressLine2\": \"Apt 3C\",\r\n            \"city\": \"Kuwait City\",\r\n            \"state\": \"Al Asimah\",\r\n            \"postalCode\": \"12345\",\r\n            \"country\": \"Kuwait\"\r\n        }\r\n    },\r\n    \"orderItemDetails\": [\r\n        {\r\n            \"lineNumber\": 1,\r\n            \"lineType\": \"Food\",\r\n            \"itemId\": \"ITEM001\",\r\n            \"itemName\": {\r\n                \"ar\": \"دجاج ساديا\",\r\n                \"en\": \"Sadia Chicken\"\r\n            },\r\n            \"itemCode\": \"SC001\",\r\n            \"uom\": \"Each\",\r\n            \"quantity\": 5,\r\n            \"avgWeight\": 0.2,\r\n            \"shelfLife\": 7,\r\n            \"availableStock\": 100,\r\n            \"contractStock\": 50,\r\n            \"isStockVisible\": false,\r\n            \"price\": 1.50,\r\n            \"discount\": 0.00,\r\n            \"requiredPrice\": 1.50,\r\n            \"totalPrice\": 7.50,\r\n            \"taxValue\": 0.75,\r\n            \"exciseTax\": 0.00,\r\n            \"vatTax\": 0.75,\r\n            \"promotion\": [\r\n                {\r\n                    \"id\": \"PROMO001\",\r\n                    \"name\": \"10% off on fruits\",\r\n                    \"startDate\": \"2024-03-30\",\r\n                    \"endDate\": \"2024-04-15\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"lineNumber\": 2,\r\n            \"lineType\": \"Food\",\r\n            \"itemId\": \"ITEM002\",\r\n            \"itemName\": {\r\n                \"ar\": \"قهوة\",\r\n                \"en\": \"Coffee\"\r\n            },\r\n            \"itemCode\": \"CF001\",\r\n            \"uom\": \"Each\",\r\n            \"quantity\": 10,\r\n            \"avgWeight\": 0.15,\r\n            \"shelfLife\": 5,\r\n            \"availableStock\": 200,\r\n            \"contractStock\": 100,\r\n            \"isStockVisible\": false,\r\n            \"price\": 0.75,\r\n            \"discount\": 0.00,\r\n            \"requiredPrice\": 0.75,\r\n            \"totalPrice\": 7.50,\r\n            \"taxValue\": 0.75,\r\n            \"exciseTax\": 0.00,\r\n            \"vatTax\": 0.75,\r\n            \"promotion\": []\r\n        }\r\n    ],\r\n    \"paymentDetails\": {\r\n        \"billingAddress\": {\r\n            \"addressLine1\": \"789 Oak St\",\r\n            \"addressLine2\": \"Apt 2B\",\r\n            \"city\": \"Kuwait City\",\r\n            \"state\": \"Al Asimah\",\r\n            \"postalCode\": \"54321\",\r\n            \"country\": \"Kuwait\"\r\n        }\r\n    },\r\n    \"createdBy\": 123456789,\r\n    \"lastUpdatedBy\": 987654321,\r\n    \"sourceSystem\": \"Order Management\",\r\n    \"isDeleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:20096/api/v1/order/cart/save"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Order",
+							"id": "d43972de-b866-44de-93af-f85bbb098ccd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"CA240329_943023d2\",\r\n    \"orderDate\": \"2024-03-29\",\r\n    \"deliveryDate\": \"2024-04-05\",\r\n    \"orderCategory\": \"Order\",\r\n    \"orderCurrency\": \"KWD\",\r\n    \"orgId\": \"ORG987654\",\r\n    \"orgName\": \"Alyasra Food Co.\",\r\n    \"orderStatus\": \"Draft\",\r\n    \"inventoryOrgId\": \"INV123456\",\r\n    \"inventoryOrgName\": \"Warehouse A\",\r\n    \"inventoryLocation\": \"Aisle 1, Shelf 3\",\r\n    \"civilDoc\": \"123-456-789\",\r\n    \"discount\": 10.50,\r\n    \"total\": 100.00,\r\n    \"netTotal\": 89.50,\r\n    \"remarks\": \"Special instructions: Fragile items\",\r\n    \"customerDetails\": {\r\n        \"mainAccountId\": \"MAINACC789\",\r\n        \"partyId\": \"PARTY123\",\r\n        \"partyName\": \"John Doe\",\r\n        \"siteId\": \"SITE789\",\r\n        \"siteName\": \"Doe Residence\",\r\n        \"siteNumber\": \"12345\"\r\n    },\r\n    \"salesDetails\": {\r\n        \"salesPersonId\": \"SALES123\",\r\n        \"salesPersonName\": \"John Smith\",\r\n        \"divisionId\": \"DIV456\",\r\n        \"divisionName\": \"Sales Division\",\r\n        \"divisionNumber\": \"001\",\r\n        \"catalogId\": \"CAT789\",\r\n        \"catalogName\": \"Food Catalog\",\r\n        \"catalogType\": \"Digital\",\r\n        \"catalogCurrency\": \"KWD\"\r\n    },\r\n    \"shippingDetails\": {\r\n        \"inventoryId\": \"INV987\",\r\n        \"inventoryName\": \"Warehouse B\",\r\n        \"deliveryWindow\": 1,\r\n        \"deliveryMode\": \"Standard\",\r\n        \"isExpress\": false,\r\n        \"shippingAddress\": {\r\n            \"addressLine1\": \"456 Elm St\",\r\n            \"addressLine2\": \"Apt 3C\",\r\n            \"city\": \"Kuwait City\",\r\n            \"state\": \"Al Asimah\",\r\n            \"postalCode\": \"12345\",\r\n            \"country\": \"Kuwait\"\r\n        }\r\n    },\r\n    \"orderItemDetails\": [\r\n        {\r\n            \"lineNumber\": 1,\r\n            \"lineType\": \"Food\",\r\n            \"itemId\": \"ITEM001\",\r\n            \"itemName\": {\r\n                \"ar\": \"دجاج ساديا\",\r\n                \"en\": \"Sadia Chicken\"\r\n            },\r\n            \"itemCode\": \"SC001\",\r\n            \"uom\": \"Each\",\r\n            \"quantity\": 5,\r\n            \"avgWeight\": 0.2,\r\n            \"shelfLife\": 7,\r\n            \"availableStock\": 100,\r\n            \"contractStock\": 50,\r\n            \"isStockVisible\": false,\r\n            \"price\": 1.50,\r\n            \"discount\": 0.00,\r\n            \"requiredPrice\": 1.50,\r\n            \"totalPrice\": 7.50,\r\n            \"taxValue\": 0.75,\r\n            \"exciseTax\": 0.00,\r\n            \"vatTax\": 0.75,\r\n            \"promotion\": [\r\n                {\r\n                    \"id\": \"PROMO001\",\r\n                    \"name\": \"10% off on fruits\",\r\n                    \"startDate\": \"2024-03-30\",\r\n                    \"endDate\": \"2024-04-15\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"lineNumber\": 2,\r\n            \"lineType\": \"Food\",\r\n            \"itemId\": \"ITEM002\",\r\n            \"itemName\": {\r\n                \"ar\": \"قهوة\",\r\n                \"en\": \"Coffee\"\r\n            },\r\n            \"itemCode\": \"CF001\",\r\n            \"uom\": \"Each\",\r\n            \"quantity\": 10,\r\n            \"avgWeight\": 0.15,\r\n            \"shelfLife\": 5,\r\n            \"availableStock\": 200,\r\n            \"contractStock\": 100,\r\n            \"isStockVisible\": false,\r\n            \"price\": 0.75,\r\n            \"discount\": 0.00,\r\n            \"requiredPrice\": 0.75,\r\n            \"totalPrice\": 7.50,\r\n            \"taxValue\": 0.75,\r\n            \"exciseTax\": 0.00,\r\n            \"vatTax\": 0.75,\r\n            \"promotion\": []\r\n        }\r\n    ],\r\n    \"paymentDetails\": {\r\n        \"billingAddress\": {\r\n            \"addressLine1\": \"789 Oak St\",\r\n            \"addressLine2\": \"Apt 2B\",\r\n            \"city\": \"Kuwait City\",\r\n            \"state\": \"Al Asimah\",\r\n            \"postalCode\": \"54321\",\r\n            \"country\": \"Kuwait\"\r\n        }\r\n    },\r\n    \"createdBy\": 123456789,\r\n    \"lastUpdatedBy\": 987654321,\r\n    \"sourceSystem\": \"Order Management\",\r\n    \"isDeleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:20096/api/v1/order/cart/create-order"
+							},
+							"response": []
+						}
+					],
+					"id": "f7f14dec-d1a1-4130-a95f-567ad3335533"
+				}
+			],
+			"id": "93d9f38e-96fc-47f8-8e9a-1cdebb890cd3"
+		},
+		{
+			"name": "Catalog",
+			"item": [
+				{
+					"name": "Save",
+					"id": "970dac02-35d9-482c-b701-852105b47a4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Horeka\",\r\n    \"status\": \"Active\",\r\n    \"divisionId\": \"DIV1003\",\r\n    \"orgId\": \"ORG1001\",\r\n    \"parentDivisionId\": \"DIV1001\",\r\n    \"currency\": \"USD\",\r\n    \"secondaryCatalogId\": 1,\r\n    \"type\": \"Customer\",\r\n    \"customerIds\": [\r\n        \"CUST1003\",\r\n        \"CUST1004\"\r\n    ],\r\n    \"catalogDtls\": [\r\n        {\r\n            \"approvalStatus\": \"Approved\",\r\n            \"itemId\": \"ITEM1004\",\r\n            \"startDate\": \"2024-04-11\",\r\n            \"endDate\": \"2025-04-11\",\r\n            \"standardPrice\": 10.00,\r\n            \"minimumPrice\": 9.00,\r\n            \"maximumPrice\": 12.00,\r\n            \"maxQty\": 100,\r\n            \"uom\": \"pieces\",\r\n            \"maxQtyType\": \"Fixed\",\r\n            \"standardPriceType\": \"Fixed\",\r\n            \"maxPriceType\": \"Variable\",\r\n            \"minPriceType\": \"Variable\"\r\n        },\r\n        {\r\n            \"approvalStatus\": \"Pending\",\r\n            \"itemId\": \"ITEM1005\",\r\n            \"startDate\": \"2024-04-12\",\r\n            \"endDate\": \"2025-04-12\",\r\n            \"standardPrice\": 15.00,\r\n            \"minimumPrice\": 14.00,\r\n            \"maximumPrice\": 18.00,\r\n            \"maxQty\": 50,\r\n            \"uom\": \"pieces\",\r\n            \"maxQtyType\": \"Variable\",\r\n            \"standardPriceType\": \"Fixed\",\r\n            \"maxPriceType\": \"Variable\",\r\n            \"minPriceType\": \"Variable\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:20096/api/v1/catalog/save"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch By ID",
+					"id": "036278eb-1e91-4d26-9cb6-c99140965381",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "127.0.0.1:20096/api/v1/catalog/6"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All With Pagination",
+					"id": "6aa49399-9be8-4fb9-b3aa-00bdaa4e3ace",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\": 1,\r\n    \"pageSize\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:20096/api/v1/catalog"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"id": "861ab4c5-8d21-4c03-8dee-6aff6b4c136f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdate\": \"12-04-2024 11:12:34\",\r\n    \"lastmodifieddate\": \"12-04-2024 11:12:34\",\r\n    \"createbyname\": \"Admin Admin\",\r\n    \"lastmodifiedbyname\": \"Admin Admin\",\r\n    \"createdbyid\": 1,\r\n    \"lastmodifiedbyid\": 1,\r\n    \"id\": 6,\r\n    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"name\": \"Horeka\",\r\n    \"status\": \"Active\",\r\n    \"type\": \"Customer\",\r\n    \"divisionId\": \"DIV1003\",\r\n    \"orgId\": \"ORG1001\",\r\n    \"parentDivisionId\": \"DIV1001\",\r\n    \"currency\": \"USD\",\r\n    \"secondaryCatalogId\": 1,\r\n    \"customerIds\": [\r\n        \"CUST1004\",\r\n        \"CUST1003\"\r\n    ],\r\n    \"catalogDtls\": [\r\n        {\r\n            \"createdate\": \"12-04-2024 11:12:34\",\r\n            \"lastmodifieddate\": \"12-04-2024 11:12:34\",\r\n            \"createbyname\": \"Admin Admin\",\r\n            \"lastmodifiedbyname\": \"Admin Admin\",\r\n            \"createdbyid\": 1,\r\n            \"lastmodifiedbyid\": 1,\r\n            \"id\": 11,\r\n            \"approvalStatus\": \"Approved\",\r\n            \"itemId\": \"ITEM1004\",\r\n            \"startDate\": \"2024-04-11T00:00:00.000+00:00\",\r\n            \"endDate\": \"2025-04-11T00:00:00.000+00:00\",\r\n            \"standardPrice\": 20.0,\r\n            \"minimumPrice\": 18.0,\r\n            \"maximumPrice\": 24.0,\r\n            \"maxQty\": 200,\r\n            \"uom\": \"pieces\",\r\n            \"maxQtyType\": \"Fixed\",\r\n            \"standardPriceType\": \"Fixed\",\r\n            \"maxPriceType\": \"Variable\",\r\n            \"minPriceType\": \"Variable\",\r\n            \"isDeleted\": false\r\n        },\r\n        {\r\n            \"createdate\": \"12-04-2024 11:12:34\",\r\n            \"lastmodifieddate\": \"12-04-2024 11:12:34\",\r\n            \"createbyname\": \"Admin Admin\",\r\n            \"lastmodifiedbyname\": \"Admin Admin\",\r\n            \"createdbyid\": 1,\r\n            \"lastmodifiedbyid\": 1,\r\n            \"id\": 12,\r\n            \"approvalStatus\": \"Approved\",\r\n            \"itemId\": \"ITEM1005\",\r\n            \"startDate\": \"2024-04-12T00:00:00.000+00:00\",\r\n            \"endDate\": \"2025-04-12T00:00:00.000+00:00\",\r\n            \"standardPrice\": 30.0,\r\n            \"minimumPrice\": 28.0,\r\n            \"maximumPrice\": 36.0,\r\n            \"maxQty\": 100,\r\n            \"uom\": \"pieces\",\r\n            \"maxQtyType\": \"Variable\",\r\n            \"standardPriceType\": \"Fixed\",\r\n            \"maxPriceType\": \"Variable\",\r\n            \"minPriceType\": \"Variable\",\r\n            \"isDeleted\": false\r\n        }\r\n    ],\r\n    \"isDeleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "127.0.0.1:20096/api/v1/catalog/6"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"id": "8440163d-fcc4-4c9f-8e5e-15863d51783a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "127.0.0.1:20096/api/v1/catalog/6"
+					},
+					"response": []
+				}
+			],
+			"id": "15f85fab-d6fe-4fae-a804-ef4e822ffa95"
+		}
+	]
+}
