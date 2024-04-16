@@ -379,18 +379,33 @@
 								"token": "{{accessToken}}"
 							}
 						},
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"page\": 1,\r\n    \"pageSize\": 10\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+						"url": {
+							"raw": "127.0.0.1:20096/api/v1/catalogs?page=1&pageSize=10",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "20096",
+							"path": [
+								"api",
+								"v1",
+								"catalogs"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
 								}
-							}
-						},
-						"url": "127.0.0.1:20096/api/v1/catalog"
+							]
+						}
 					},
 					"response": []
 				},
