@@ -343,7 +343,7 @@
 								}
 							}
 						},
-						"url": "127.0.0.1:20096/api/v1/catalog"
+						"url": "127.0.0.1:20096/api/v1/catalogs"
 					},
 					"response": []
 				},
