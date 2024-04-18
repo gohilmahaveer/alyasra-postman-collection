@@ -536,7 +536,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://192.168.0.121:20093/api/v1/items"
+						"url": "http://127.0.0.1:20093/api/v1/items"
 					},
 					"response": []
 				}
