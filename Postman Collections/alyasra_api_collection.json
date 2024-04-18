@@ -517,7 +517,7 @@
 								"type": "text"
 							}
 						],
-						"url": "http://192.168.0.121:20092/api/v1/division/tree"
+						"url": "http://127.0.0.1:20092/api/v1/division/tree"
 					},
 					"response": []
 				}
