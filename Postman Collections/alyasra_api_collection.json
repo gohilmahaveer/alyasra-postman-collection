@@ -447,7 +447,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:20096/api/v1/catalogs/15/all"
+						"url": "http://localhost:20096/api/v1/catalogs/17/parent"
 					},
 					"response": []
 				},
@@ -504,7 +504,7 @@
 								"type": "text"
 							}
 						],
-						"url": "http://192.168.0.121:20092/api/v1/division/tree"
+						"url": "http://127.0.0.1:20092/api/v1/division/tree"
 					},
 					"response": []
 				}
