@@ -349,7 +349,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
 						"url": "127.0.0.1:20096/api/v1/catalogs/8"
 					},
 					"response": []
