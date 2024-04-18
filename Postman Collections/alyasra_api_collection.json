@@ -459,5 +459,43 @@
 			],
 			"id": "15f85fab-d6fe-4fae-a804-ef4e822ffa95"
 		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": {
+			"accessTokenUrl": "192.168.0.123:9090/realms/alyasra/protocol/openid-connect/token",
+			"scope": "openid",
+			"clientSecret": "S8y4rd1zqbIXPZec7SwOLO5YpCnYoGbS",
+			"password": "1234",
+			"username": "1234@gmail.com",
+			"grant_type": "password_credentials",
+			"clientId": "alyasra-admin-portal",
+			"tokenName": "alyasra",
+			"addTokenTo": "header"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "81ef8874-89d1-4ad5-95b3-ca058b5a095c",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "804cb781-9ff6-42d2-bbb8-865aef6538ae",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
 	]
 }
