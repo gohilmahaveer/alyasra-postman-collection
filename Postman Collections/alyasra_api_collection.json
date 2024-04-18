@@ -479,6 +479,25 @@
 				}
 			],
 			"id": "16ffc7cd-6f86-4bae-ae47-c517ce06955f"
+		},
+		{
+			"name": "Staff Management",
+			"item": [
+				{
+					"name": "Division Tree View",
+					"id": "48fe86b9-4e3f-4bac-b6da-daeb98af7aa3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:20092/api/v1/division/tree"
+					},
+					"response": []
+				}
+			],
+			"id": "3456df4e-fdd2-4328-80ff-ff684d0d327e"
 		}
 	],
 	"auth": {
