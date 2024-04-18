@@ -463,6 +463,19 @@
 						"url": "http://localhost:20096/api/v1/catalogs/getParentItem/8"
 					},
 					"response": []
+				},
+				{
+					"name": "Secondary Catalog",
+					"id": "589b02e6-7f59-4b03-8c84-0d651a40cf44",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:20096/api/v1/catalogs/getSecondaryCatalog"
+					},
+					"response": []
 				}
 			],
 			"id": "15f85fab-d6fe-4fae-a804-ef4e822ffa95"
