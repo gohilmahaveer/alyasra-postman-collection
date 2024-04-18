@@ -490,6 +490,25 @@
 			"name": "Staff Management",
 			"item": [
 				{
+					"name": "Staff",
+					"item": [
+						{
+							"name": "Fetch By ID",
+							"id": "7ff3fb8d-0c14-484a-b682-7675053571f0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:20092/api/v1/staff/1"
+							},
+							"response": []
+						}
+					],
+					"id": "b0bb707c-8f93-4558-abfb-49b4ef439a57"
+				},
+				{
 					"name": "Division Tree View",
 					"id": "48fe86b9-4e3f-4bac-b6da-daeb98af7aa3",
 					"protocolProfileBehavior": {
