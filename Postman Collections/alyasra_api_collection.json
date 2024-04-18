@@ -491,7 +491,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
 						"url": "http://localhost:20092/api/v1/division/tree"
 					},
 					"response": []
