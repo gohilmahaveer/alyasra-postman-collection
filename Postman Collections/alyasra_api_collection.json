@@ -439,20 +439,7 @@
 					"response": []
 				},
 				{
-					"name": "Get All Item By Catalog ID",
-					"id": "ad7f72ab-7034-497a-a10a-f6cb23fc7891",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "http://127.0.0.1:20096/api/v1/catalogs/getAllItem/8"
-					},
-					"response": []
-				},
-				{
-					"name": "Get Parent Item By Catalog ID",
+					"name": "Get Item By Type",
 					"id": "63c90ffe-6c83-4667-93ca-1ac2ecf22854",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -460,7 +447,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:20096/api/v1/catalogs/getParentItem/8"
+						"url": "http://localhost:20096/api/v1/catalogs/15/all"
 					},
 					"response": []
 				},
