@@ -460,6 +460,25 @@
 				}
 			],
 			"id": "15f85fab-d6fe-4fae-a804-ef4e822ffa95"
+		},
+		{
+			"name": "Common List",
+			"item": [
+				{
+					"name": "Find By Type",
+					"id": "4560e9d2-5000-4830-a77d-61a2609ee776",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:20096/api/v1/commonList/generic/currency"
+					},
+					"response": []
+				}
+			],
+			"id": "16ffc7cd-6f86-4bae-ae47-c517ce06955f"
 		}
 	],
 	"auth": {
