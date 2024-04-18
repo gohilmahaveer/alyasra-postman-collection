@@ -504,6 +504,25 @@
 				}
 			],
 			"id": "3456df4e-fdd2-4328-80ff-ff684d0d327e"
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Fetch All Without Pagination",
+					"id": "a95bb9a6-71df-4664-a7b3-55c242b45d94",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:20093/api/v1/items"
+					},
+					"response": []
+				}
+			],
+			"id": "5bec19e8-4688-499f-aa66-77225711c4ab"
 		}
 	],
 	"auth": {
