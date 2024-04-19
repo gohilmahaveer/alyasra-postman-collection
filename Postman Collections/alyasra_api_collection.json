@@ -548,6 +548,25 @@
 				}
 			],
 			"id": "5bec19e8-4688-499f-aa66-77225711c4ab"
+		},
+		{
+			"name": "Quote-Contract",
+			"item": [
+				{
+					"name": "Get Item For Quote Cointract",
+					"id": "f9026aa7-ccd1-43f5-b41f-eae4fada254e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:20096/api/v1/catalogs/getItemForQuoteContract/CUST1001"
+					},
+					"response": []
+				}
+			],
+			"id": "7649513a-e432-4c94-934c-0414dbe09087"
 		}
 	],
 	"auth": {
